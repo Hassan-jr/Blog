@@ -1,15 +1,12 @@
-import React from "react";
-import { useTheme } from "next-themes";
-import  ThemeSwitch from "../components/ThemeSwitcher"
+import React from 'react'
+
 
 const Home = () => {
-  const { theme, setTheme } = useTheme();
-  return;
-  <div>
-   { ThemeSwitch()}
-    <h1 className="text-4xl  text-black"> DARK MODE AND LIGHT MODE WORKING</h1>
-   
-  </div>;
-};
+  return (
+    <div>
+      Home
+    </div>
+  )
+}
 
-export default Home;
+export default Home
