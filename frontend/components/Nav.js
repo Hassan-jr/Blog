@@ -10,8 +10,9 @@ const toggleMenu=()=>{
   return (
     <div className="flex flex-row justify-around px-5 pt-1 md:px-20 md:pt-3 align-middle nav">
       {/* LOGO */}
-      <div className='flex-1'>
-        <h1 className="text-2xl">Hassanjr</h1>
+      <div className='flex-1 '>
+        
+        <h1 className="text-4xl logobox p-3 w-40 logo font-bold">Hassanjr</h1>
       </div>
       {/* Nav big screen*/}
       <div>
