@@ -8,11 +8,10 @@ const toggleMenu=()=>{
 }
 
   return (
-    <div className="flex flex-row justify-around px-5 pt-1 md:px-20 md:pt-3 align-middle nav">
+    <div className="flex flex-row justify-around px-3 pt-1 md:px-20 md:pt-3 align-middle nav">
       {/* LOGO */}
       <div className='flex-1 '>
-        
-        <h1 className="text-4xl logobox p-3 w-40 logo font-bold">Hassanjr</h1>
+        <h1 className="text-4xl  p-3 w-40 logo font-bold">Hassanjr</h1>
       </div>
       {/* Nav big screen*/}
       <div>
@@ -63,7 +62,7 @@ const toggleMenu=()=>{
       </div>}
 {/* Menu */}
 <div className="block md:hidden">
-  <h1 className="text-1xl" onClick={toggleMenu}>MENU</h1>
+  <h1 className="text-1xl mt-5" onClick={toggleMenu}>MENU</h1>
 </div>
 
     </div>
