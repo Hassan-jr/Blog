@@ -8,7 +8,7 @@ const Header = () => {
     "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400  font-bold text-white";
 
   return (
-    <div className="md:flex flex-row  px-20 justify-center items-center nav">
+    <div className="md:flex flex-row px-5 md:px-20 justify-center items-center nav">
       {/* text */}
       <div className="md:w-96 w-full ">
         <h1 className="font-bold text-3xl text-gradient mb-6">
