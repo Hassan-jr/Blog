@@ -17,7 +17,7 @@ const Nav = () => {
       {/* Nav big screen*/}
       <div>
         <ul className="hidden md:flex flex-row justify-evenly space-x-6">
-          <li>
+          <li className=" hover:text-white">
             <Link href="/">Home</Link>
           </li>
           <li className=" hover:text-white">
@@ -26,18 +26,18 @@ const Nav = () => {
           <li className=" hover:text-white">
             <Link href="/blockchain">Blockchain</Link>
           </li>
-          <li>
+          <li className=" hover:text-white">
             <Link href="/tech">Tech</Link>
           </li>
-          <li>
+          <li className=" hover:text-white">
             <Link href="/finance">Finance</Link>
           </li>
 
-          <li>
+          <li className=" hover:text-white">
             <Link href="/health">Health</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
+          </li >
+          <li className=" hover:text-white">
+            <Link href="/about">About Us</Link>
           </li>
         </ul>
       </div>
@@ -64,7 +64,7 @@ const Nav = () => {
             <Link href="/health">Health</Link>
           </li>
           <li className=" hover:text-white">
-            <Link href="/about">About</Link>
+            <Link href="/about">About Us</Link>
           </li>
         </ul>
       )}

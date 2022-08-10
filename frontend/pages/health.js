@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from "../components/Header";
+import pic from '../img/healthpic.png'
 
 
 const Health = () => {
@@ -7,7 +8,7 @@ const Health = () => {
   const headerprops = {
     title: "",
     desc: "",
-    img: "",
+    pic,
     g1: "",
     g2: "",
     g3: "",
