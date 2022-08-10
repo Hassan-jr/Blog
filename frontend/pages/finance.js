@@ -1,9 +1,24 @@
-import React from 'react'
+import React from "react";
+import Header from "../components/Header";
 
 const Finance = () => {
-  return (
-    <div>Finance</div>
-  )
-}
+  const headerprops = {
+    title: "",
+    desc: "",
+    img: "",
+    g1: "",
+    g2: "",
+    g3: "",
+    g4: "",
+    g5: "",
+    g6: "",
+  };
 
-export default Finance
+  return (
+    <div>
+      <Header {...headerprops} />
+    </div>
+  );
+};
+
+export default Finance;

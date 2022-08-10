@@ -1,8 +1,26 @@
 import React from 'react'
+import Header from "../components/Header";
+
 
 const Health = () => {
+
+  const headerprops = {
+    title: "",
+    desc: "",
+    img: "",
+    g1: "",
+    g2: "",
+    g3: "",
+    g4: "",
+    g5: "",
+    g6: "",
+  };
+
+
   return (
-    <div>Health</div>
+    <div>
+      <Header {...headerprops} />
+    </div>
   )
 }
 

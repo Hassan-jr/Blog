@@ -20,15 +20,19 @@ const Nav = () => {
           <li>
             <Link href="/">Home</Link>
           </li>
-          <li>
-            <Link href="/dev">Dev</Link>
+          <li className=" hover:text-white">
+            <Link href="/dev">Developers</Link>
           </li>
-          <li>
-            <Link href="/finance">Finance</Link>
+          <li className=" hover:text-white">
+            <Link href="/blockchain">Blockchain</Link>
           </li>
           <li>
             <Link href="/tech">Tech</Link>
           </li>
+          <li>
+            <Link href="/finance">Finance</Link>
+          </li>
+
           <li>
             <Link href="/health">Health</Link>
           </li>
@@ -44,14 +48,18 @@ const Nav = () => {
             <Link href="/">Home</Link>
           </li>
           <li className=" hover:text-white">
-            <Link href="/dev">Dev</Link>
+            <Link href="/dev">Developers</Link>
           </li>
           <li className=" hover:text-white">
-            <Link href="/finance">Finance</Link>
+            <Link href="/blockchain">Blockchain</Link>
           </li>
           <li className=" hover:text-white">
             <Link href="/tech">Tech</Link>
           </li>
+          <li className=" hover:text-white">
+            <Link href="/finance">Finance</Link>
+          </li>
+          
           <li className=" hover:text-white">
             <Link href="/health">Health</Link>
           </li>

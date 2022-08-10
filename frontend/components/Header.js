@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import homepic from "../img/homepic.png";
-import Link from 'next/link';
 
-const Header = () => {
+
+
+const Header = (prop) => {
   const commonStyles =
     "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400  font-bold text-white";
 
@@ -11,37 +11,42 @@ const Header = () => {
     <div className="md:flex flex-row px-5 md:px-20 justify-center items-center nav">
       {/* text */}
       <div className="md:w-96 w-full ">
-        <h1 className="font-bold text-3xl text-gradient mb-6">
-          We serve global brands with digital solutions
-        </h1>
-        <p className="logobox p-3 ">
-          If you feel the same way as brand manager, digital marketeer Or a
-          brave newbie, Join Our Game We provide soltions that iginites
-          businesses
-        </p>
+        <h1 className="font-bold text-3xl text-gradient mb-6">{prop.title}</h1>
+        <p className="logobox p-3 ">{prop.desc}</p>
+        {/* grid  table title */}
+        <div>
+          <h1 className="font-bold text-3xl text-gradient mt-5">
+            Area Of Specializations
+          </h1>
+        </div>
         {/* the grid table */}
-        <div className="grid grid-cols-3 md:grid-col-2 w-full mt-10 mb-10 blue-glassmorphism">
+        <div className="grid grid-cols-3 md:grid-col-2 w-full mt-5 mb-10 blue-glassmorphism">
           <div className={`rounded-tl-2xl ${commonStyles}`}>
-            <Link href="/dev">Developer</Link>
+            <p> {prop.g1} </p>
           </div>
           <div className={` ${commonStyles}`}>
-          <Link href="/tech">Tech</Link>
+            <p> {prop.g2}</p>
           </div>
-          <div className={`rounded-tr-2xl ${commonStyles}`}>
-          <Link href="/finace">Finance</Link>
+          <div className={` rounded-tr-2xl ${commonStyles}`}>
+            <p>{prop.g3}</p>
           </div>
           <div className={`rounded-bl-2xl ${commonStyles}`}>
-          <Link href="/health">Health</Link>
+            <p>{prop.g4}</p>
           </div>
           <div className={` ${commonStyles}`}>
-          <Link href="/about">About Us</Link>
+            <p>{prop.g5}</p>
           </div>
-          <div className={`rounded-br-2xl ${commonStyles}`}>
+          <div className={` rounded-br-2xl ${commonStyles}`}>
+            <p>{prop.g6}</p>
+          </div>
+          {/* <div className={`rounded-br-2xl ${commonStyles}`}>
           <Link href="/">Home</Link>
-          </div>
+          </div> */}
         </div>
       </div>
-      <Image src={homepic} />
+      <div>
+        <Image src={prop.homepic} />
+      </div>
     </div>
   );
 };
