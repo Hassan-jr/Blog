@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "../components/Header";
 import pic from '../img/devpic.png'
+import { useSelector, useDispatch } from 'react-redux'
 
 const dev = () => {
   const headerprops = {
@@ -15,9 +16,15 @@ const dev = () => {
     g6:  "Api's", 
     bg: 'gradient-bg-welcome '
   }
+
+const dispatch = useDispatch()
+ const value = useSelector((state)=>state.testSlice)
+ console.log(value);
+
   return (
     <div>
       <Header {...headerprops} />
+      <h1>This  is  from redux state {value}</h1>
     </div>
   )
 }
