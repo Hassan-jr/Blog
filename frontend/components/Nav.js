@@ -39,6 +39,10 @@ const Nav = () => {
           <li className=" hover:text-white">
             <Link href="/about">About Us</Link>
           </li>
+          {/* to be remove */}
+          <li className=" hover:text-white">
+            <Link href="/post">Post</Link>
+          </li>
         </ul>
       </div>
       {/* nav small screen */}
