@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
+import { wrapper } from "../components/Redux/store";
 
 const Layout = ({ children }) => {
   return (
@@ -10,4 +11,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default wrapper.withRedux(Layout);
