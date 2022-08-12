@@ -22,29 +22,21 @@ const post = () => {
 
   //  onChangehandler
   const onChangehandler = (e) => {
+    const name = e.target.name;
     setPost((prev) => ({
       ...prev,
       [name]: e.target.value,
     }));
   };
+  console.log("hello world!");
+  const hanldeClick2 = () => {
+    const  post2 = post
+    console.log(post2);
+  };
 
   // submitHandler
   const submitHandler = (e) => {
     e.preventDefault();
-    var arr [];
-    num.map((item, index)=>
-      arr.push({
-        title : e.target.body{index + 1}url.mainUrl
-      })
-    )
-    setPost({
-      mainTitle: e.target.mainTitle.value,
-      category: e.target.mainTitle.category,
-      mainUrl: e.target.mainTitle.mainUrl,
-      
-      
-    });
-    
   };
 
   return (
@@ -120,17 +112,20 @@ const post = () => {
         >
           SUBMIT
         </button> */}
-        <input
+        <button
           type="submit"
-          value="Submit"
           className="bg-slate-500 text-white rounded p-3 mt-20 mb-20"
-        />
+          onClick={hanldeClick2}
+        >
+          SUBMIT
+        </button>
       </form>
 
       {/* TEST */}
       <div>
         <h1>{post.mainTitle}</h1>
         <h1>{post.category}</h1>
+        <h1>{post.body}</h1>
       </div>
     </div>
   );
