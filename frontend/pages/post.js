@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const post = () => {
-  const [post, setPost] = useState({
+  const [Post, setPost] = useState({
     mainTitle: "",
     category: "",
     mainUrl: "",
@@ -15,23 +15,30 @@ const post = () => {
   });
 
   // number of paragraphs
-  const [num, setNum] = useState([1]);
-  const handleClick = () => {
-    setNum((prev) => [...prev, 2]);
+  // const [num, setNum] = useState([1]);
+  const handleClick = (e) => {
+    e.preventDefault();
+    // setNum((prev) => [...prev, 2]);
+    setPost({
+      body: [...Post.body, { title: "", content: "", url: "" }],
+    });
   };
 
   //  onChangehandler
   const onChangehandler = (e) => {
-    const name = e.target.name;
-    setPost((prev) => ({
-      ...prev,
-      [name]: e.target.value,
-    }));
+    if (["title", "content", "url"].includes(e.target.name)) {
+      let body = Post.body && [...Post.body];
+      body[e.target.id][e.target.name] = e.target.value;
+      setPost({ body });
+    } else {
+      setPost({ [e.target.name]: e.target.value });
+    }
   };
-  console.log("hello world!");
+
+  // test
+
   const hanldeClick2 = () => {
-    const  post2 = post
-    console.log(post2);
+    console.log(Post);
   };
 
   // submitHandler
@@ -44,7 +51,11 @@ const post = () => {
       <h1 className="text-5xl m-10">MAKE A POST</h1>
 
       {/* form starts here */}
-      <form onSubmit={submitHandler} className="mt-10">
+      <form
+        onSubmit={submitHandler}
+        className="mt-10"
+        onChange={onChangehandler}
+      >
         <h1 className="text-4xl text-white">Header</h1>
         <div className="flex flex-col space-y-3 w-80 ">
           {/*  mainTitle*/}
@@ -52,14 +63,16 @@ const post = () => {
             type="text"
             name="mainTitle"
             placeholder="Main Title"
-            onChange={onChangehandler}
+            value={Post.mainTitle}
+            // onChange={onChangehandler}
           />
           {/* category */}
           <input
             type="text"
             name="category"
             placeholder="category"
-            onChange={onChangehandler}
+            value={Post.category}
+            // onChange={onChangehandler}
           />
 
           {/* mainUrl */}
@@ -67,11 +80,13 @@ const post = () => {
             type="text"
             name="mainUrl"
             placeholder="mainUrl"
-            onChange={onChangehandler}
+            value={Post.mainUrl}
+            // onChange={onChangehandler}
           />
+
+          {/* BUTTO FOR ADDING THE PARAGRAPHS */}
           <div className="flex flex-row space-x-8">
             <h1 className="text-4xl text-white">BODY</h1>
-
             <button
               className="bg-slate-500 text-white rounded p-3"
               onClick={handleClick}
@@ -81,27 +96,33 @@ const post = () => {
           </div>
 
           {/* BODY */}
-          {num.map((item, index) => (
+          {Post.body?.map((item, index) => (
             <div className="flex flex-col space-y-3 w-80 mb-20" key={index}>
               <input
                 type="text"
-                name={`body${index + 1}title`}
+                id={index}
+                name="title"
                 placeholder={`Enter  The title ${index + 1}`}
-                onChange={onChangehandler}
+                value={item.title}
+                // onChange={onChangehandler}
               />
               <textarea
                 className="h-40"
                 type="text"
-                name={`body${index + 1}content`}
+                id={index}
+                name="content"
                 placeholder={`Enter  The content ${index + 1}`}
-                onChange={onChangehandler}
+                value={item.content}
+                // onChange={onChangehandler}
               />
               <input
                 className="mb-10"
                 type="text"
-                name={`body${index + 1}url`}
+                id={index}
+                name="url"
                 placeholder={`Enter  The Imge URL ${index + 1}`}
-                onChange={onChangehandler}
+                value={item.url}
+                // onChange={onChangehandler}
               />
             </div>
           ))}
@@ -123,9 +144,9 @@ const post = () => {
 
       {/* TEST */}
       <div>
-        <h1>{post.mainTitle}</h1>
-        <h1>{post.category}</h1>
-        <h1>{post.body}</h1>
+        <h1>{Post.mainTitle}</h1>
+        <h1>{Post.category}</h1>
+        <h1>{Post && Post.body && Post.body[0].title}</h1>
       </div>
     </div>
   );
