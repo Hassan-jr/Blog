@@ -18,7 +18,7 @@ const initialValues = {
 const post = () => {
   return (
     <div className="flex flex-col  items-center justify-items-end  text-white space-x-2">
-      <h1>Invite friends</h1>
+      <h1 className='text-3xl text-bold'>MAKE A BLOG</h1>
       <Formik
         initialValues={initialValues}
         onSubmit={async (values) => {
@@ -104,10 +104,11 @@ const post = () => {
                       // main on div
                       <div className="col" key={index}>
                         {/* each object wthin the array */}
+                        <h1 className='text-3xl text-bold'>Paragraph {index+1}</h1>
 
                         {/* title */}
                         <div className="col my-5 space-x-5">
-                          <label htmlFor={`posts.${index}.title`}>Title</label>
+                          
                           <Field
                             name={`posts.${index}.title`}
                             placeholder="Enter The Paragraph Title"
@@ -123,9 +124,8 @@ const post = () => {
 
                         {/* content */}
                         <div className="col my-5 space-x-5">
-                          <label htmlFor={`posts.${index}.content`}>
-                            Content
-                          </label>
+                          
+                          
                           <Field
                             name={`posts.${index}.content`}
                             placeholder="Enter The paragraphs content"
@@ -141,7 +141,7 @@ const post = () => {
 
                         {/* url */}
                         <div className="col my-5 space-x-5">
-                          <label htmlFor={`posts.${index}.url`}>POST URL</label>
+                         
                           <Field
                             name={`posts.${index}.url`}
                             placeholder="Enter The Paragraph image url"
@@ -161,6 +161,7 @@ const post = () => {
                             type="button"
                             className="secondary"
                             onClick={() => remove(index)}
+                            className="bg-red-700 p-5 rounded"
                           >
                             X
                           </button>
@@ -171,13 +172,14 @@ const post = () => {
                     type="button"
                     className="secondary"
                     onClick={() => push({ title: "", content: "", url: "" })}
+                    className="bg-sky-700 p-5 rounded m-5"
                   >
-                    Add Friend
+                    Add Paragraph
                   </button>
                 </div>
               )}
             </FieldArray>
-            <button type="submit">Invite</button>
+            <button type="submit" className="bg-green-700 p-5 rounded m-5">Submit</button>
           </Form>
         )}
       </Formik>
