@@ -6,17 +6,18 @@ const initialValues = {
   mainUrl: "",
   category: "",
   metaData: "",
-  friends: [
+  posts: [
     {
-      name: "",
-      email: "",
+      title: "",
+      content: "",
+      url: "",
     },
   ],
 };
 
 const post = () => {
   return (
-    <div>
+    <div className="flex flex-col  items-center justify-items-end  text-white space-x-2">
       <h1>Invite friends</h1>
       <Formik
         initialValues={initialValues}
@@ -27,12 +28,17 @@ const post = () => {
         }}
       >
         {({ values }) => (
-          <Form>
+          <Form className="flex flex-col">
             {/* mainTitle */}
 
-            <div className="col">
-              <label htmlFor="mainTitle">MainTitle</label>
-              <Field name="mainTitle" placeholder="mainTitle" type="text" />
+            <div className="col my-5 space-x-5">
+              
+              <Field
+                name="mainTitle"
+                placeholder="mainTitle"
+                type="text"
+                className="w-80 text-stone-900"
+              />
               <ErrorMessage
                 name="mainTitle"
                 component="div"
@@ -42,9 +48,14 @@ const post = () => {
 
             {/* mainUrl */}
 
-            <div className="col">
-              <label htmlFor="mainUrl">MainUrl</label>
-              <Field name="mainUrl" placeholder="mainUrl" type="text" />
+            <div className="col my-5 space-x-5">
+             
+              <Field
+                name="mainUrl"
+                placeholder="mainUrl"
+                type="text"
+                className="w-80 text-stone-900"
+              />
               <ErrorMessage
                 name="mainUrl"
                 component="div"
@@ -53,9 +64,14 @@ const post = () => {
             </div>
 
             {/* category */}
-            <div className="col">
-              <label htmlFor="category">category</label>
-              <Field name="category" placeholder="category" type="text" />
+            <div className="col my-5 space-x-5">
+             
+              <Field
+                name="category"
+                placeholder="category"
+                type="text"
+                className="w-80 text-stone-900"
+              />
               <ErrorMessage
                 name="category"
                 component="div"
@@ -64,58 +80,82 @@ const post = () => {
             </div>
 
             {/* metaData */}
-            <div className="col">
-              <label htmlFor="metaData">MetaData</label>
-              <Field name="metaData" placeholder="metaData" type="text" />
+            <div className="col my-5 space-x-5">
+             
+              <Field
+                name="metaData"
+                placeholder="metaData"
+                type="text"
+                className="w-80 text-stone-900"
+              />
               <ErrorMessage
                 name="metaData"
                 component="div"
                 className="field-error"
               />
             </div>
-                 
-                 {/* array of paragraphs or posts */}
-            <FieldArray name="friends">
+
+            {/* array of paragraphs or posts */}
+            <FieldArray name="posts">
               {({ insert, remove, push }) => (
                 <div>
-                  {values.friends.length > 0 &&
-                    values.friends.map((friend, index) => (
+                  {values.posts.length > 0 &&
+                    values.posts.map((post, index) => (
                       // main on div
-                      <div className="row" key={index}>
+                      <div className="col" key={index}>
                         {/* each object wthin the array */}
 
-                        {/* name */}
-                        <div className="col">
-                          <label htmlFor={`friends.${index}.name`}>Name</label>
+                        {/* title */}
+                        <div className="col my-5 space-x-5">
+                          <label htmlFor={`posts.${index}.title`}>Title</label>
                           <Field
-                            name={`friends.${index}.name`}
-                            placeholder="Jane Doe"
+                            name={`posts.${index}.title`}
+                            placeholder="Enter The Paragraph Title"
                             type="text"
+                            className="w-80 text-stone-900"
                           />
                           <ErrorMessage
-                            name={`friends.${index}.name`}
+                            name={`post.${index}.title`}
                             component="div"
                             className="field-error"
                           />
                         </div>
 
-                               {/* email */}
-                        <div className="col">
-                          <label htmlFor={`friends.${index}.email`}>
-                            Email
+                        {/* content */}
+                        <div className="col my-5 space-x-5">
+                          <label htmlFor={`posts.${index}.content`}>
+                            Content
                           </label>
                           <Field
-                            name={`friends.${index}.email`}
-                            placeholder="jane@acme.com"
-                            type="email"
+                            name={`posts.${index}.content`}
+                            placeholder="Enter The paragraphs content"
+                            type="textarea"
+                            className="w-80 h-40 text-stone-900"
                           />
                           <ErrorMessage
-                            name={`friends.${index}.name`}
+                            name={`posts.${index}.content`}
                             component="div"
                             className="field-error"
                           />
                         </div>
-                        {/* END */}
+
+                        {/* url */}
+                        <div className="col my-5 space-x-5">
+                          <label htmlFor={`posts.${index}.url`}>POST URL</label>
+                          <Field
+                            name={`posts.${index}.url`}
+                            placeholder="Enter The Paragraph image url"
+                            type="text"
+                            className="w-80 text-stone-900"
+                          />
+                          <ErrorMessage
+                            name={`post.${index}.url`}
+                            component="div"
+                            className="field-error"
+                          />
+                        </div>
+
+                        {/* END  button to cancel below*/}
                         <div className="col">
                           <button
                             type="button"
@@ -130,7 +170,7 @@ const post = () => {
                   <button
                     type="button"
                     className="secondary"
-                    onClick={() => push({ name: "", email: "" })}
+                    onClick={() => push({ title: "", content: "", url: "" })}
                   >
                     Add Friend
                   </button>
