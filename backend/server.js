@@ -15,7 +15,7 @@ app.use (express.urlencoded({extended: true}))
 const port =   process.env.PORT || 4000
 
 
-app.use('/post', require('./routes/post'));
+app.use('/post', require('./routes/postRoute'));
 
 
 app.listen (port, ()=>{

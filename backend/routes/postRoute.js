@@ -1,12 +1,13 @@
 const express = require('express')
 const router = express.Router()
 const {
-    getPosts
+    getPosts,
+    addPost
   } = require('../controllers/postController')
 
 
   
-router.route('/dev').get(getPosts)
+router.route('/').get(getPosts).post(addPost)
 
 
 module.exports = router

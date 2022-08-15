@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage, FieldArray } from "formik";
+import axios from "axios";
 
 const initialValues = {
   mainTitle: "",
@@ -18,11 +19,24 @@ const initialValues = {
 const post = () => {
   return (
     <div className="flex flex-col  items-center justify-items-end  text-white space-x-2">
-      <h1 className='text-3xl text-bold'>MAKE A BLOG</h1>
+      <h1 className="text-3xl text-bold">MAKE A BLOG</h1>
       <Formik
         initialValues={initialValues}
         onSubmit={async (values) => {
           await new Promise((r) => setTimeout(r, 500));
+          //  test
+          axios
+            .post("http://localhost:5000/post", {
+              ...values,
+            })
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+          // end
+
           alert(JSON.stringify(values, null, 2));
           // console.log(values);
         }}
@@ -32,7 +46,6 @@ const post = () => {
             {/* mainTitle */}
 
             <div className="col my-5 space-x-5">
-              
               <Field
                 name="mainTitle"
                 placeholder="mainTitle"
@@ -49,7 +62,6 @@ const post = () => {
             {/* mainUrl */}
 
             <div className="col my-5 space-x-5">
-             
               <Field
                 name="mainUrl"
                 placeholder="mainUrl"
@@ -65,7 +77,6 @@ const post = () => {
 
             {/* category */}
             <div className="col my-5 space-x-5">
-             
               <Field
                 name="category"
                 placeholder="category"
@@ -81,7 +92,6 @@ const post = () => {
 
             {/* metaData */}
             <div className="col my-5 space-x-5">
-             
               <Field
                 name="metaData"
                 placeholder="metaData"
@@ -104,11 +114,12 @@ const post = () => {
                       // main on div
                       <div className="col" key={index}>
                         {/* each object wthin the array */}
-                        <h1 className='text-3xl text-bold'>Paragraph {index+1}</h1>
+                        <h1 className="text-3xl text-bold">
+                          Paragraph {index + 1}
+                        </h1>
 
                         {/* title */}
                         <div className="col my-5 space-x-5">
-                          
                           <Field
                             name={`posts.${index}.title`}
                             placeholder="Enter The Paragraph Title"
@@ -124,8 +135,6 @@ const post = () => {
 
                         {/* content */}
                         <div className="col my-5 space-x-5">
-                          
-                          
                           <Field
                             name={`posts.${index}.content`}
                             placeholder="Enter The paragraphs content"
@@ -141,7 +150,6 @@ const post = () => {
 
                         {/* url */}
                         <div className="col my-5 space-x-5">
-                         
                           <Field
                             name={`posts.${index}.url`}
                             placeholder="Enter The Paragraph image url"
@@ -179,7 +187,9 @@ const post = () => {
                 </div>
               )}
             </FieldArray>
-            <button type="submit" className="bg-green-700 p-5 rounded m-5">Submit</button>
+            <button type="submit" className="bg-green-700 p-5 rounded m-5">
+              Submit
+            </button>
           </Form>
         )}
       </Formik>

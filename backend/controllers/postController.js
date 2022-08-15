@@ -1,11 +1,24 @@
+const Post = require("../models/postSchema");
 
+const getPosts = async (req, res) => {
+    const posts = await Post.find()
 
-const getPosts = async (req, res)=>{
+    res.status(200).json(posts[1]) 
+ 
+};
 
-    res.send("ALL POSTS WILL BE SENT FORM HERE")
+const addPost = async (req, res) => {
+    const val = req.body
+
+    const post = await Post.create(val)
+    console.log('====================================');
+    console.log(post);
+    console.log('====================================');
 }
 
 
+
 module.exports = {
-    getPosts,
-  }
+  getPosts,
+  addPost,
+};
