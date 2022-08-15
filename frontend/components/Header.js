@@ -10,11 +10,11 @@ const Header = (prop) => {
    const bgc = prop.bg || "nav"
 
   return (
-    <div className={`md:flex flex-row px-5 md:px-20 justify-center items-center ${bgc}`}>
+    <div className={`text-white md:flex flex-row px-5 md:px-20 justify-center items-center ${bgc}`}>
       {/* text */}
       <div className="md:w-96 w-full ">
-        <h1 className="font-bold text-3xl text-gradient mb-6">{prop.title}</h1>
-        <p className="logobox p-3 ">{prop.desc}</p>
+        <h1 className="font-bold text-3xl text-gradient2 mb-6">{prop.title}</h1>
+        <p className="white-glassmorphism p-3 ">{prop.desc}</p>
         {/* grid  table title */}
         <div>
           <h1 className="font-bold text-3xl text-gradient mt-5">
@@ -47,7 +47,7 @@ const Header = (prop) => {
         </div>
       </div>
       <div>
-        <Image src={prop.pic} />
+        <Image className="object-contain ml-10" height="400" width='500' src={prop.pic} />
       </div>
     </div>
   );

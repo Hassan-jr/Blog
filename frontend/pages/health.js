@@ -15,6 +15,7 @@ const Health = () => {
     g4: "",
     g5: "",
     g6: "",
+    bg: 'bg-discount-gradient'
   };
 
 

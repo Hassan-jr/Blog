@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
-import pic from '../img/techpic.png'
+
+import pic from '../img/techpic.svg'
 
 const Tech = () => {
   const headerprops = {
@@ -17,8 +18,11 @@ const Tech = () => {
   };
 
   return (
-    <div>
+    <div className="h-80">
       <Header {...headerprops} />
+      ljlj
+      lksdjflkdj
+      lksdjflkdj
     </div>
   );
 };

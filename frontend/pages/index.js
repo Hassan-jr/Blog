@@ -12,7 +12,8 @@ const headerprops = {
   g3:  'Technology',
   g4:  'Finance',
   g5:  'Health',
-  g6:  'Progrmamming'
+  g6:  'Progrmamming',
+  bg: 'bg-gray-gradient'
 }
 
 

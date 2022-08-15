@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
+import Image from  'next/image';
+import logo from "../img/logo.png"
 
 const Nav = () => {
   const [menu, setMenu] = useState(false);
@@ -9,10 +11,17 @@ const Nav = () => {
   };
 
   return (
-    <div className="flex flex-row justify-around px-3 pt-1 md:px-20 md:pt-3 align-middle nav">
+    <div className="flex flex-row text-white justify-between px-3 pt-1 md:px-0 md:pr-10 md:pt-3 align-middle bg-gray-gradient">
       {/* LOGO */}
-      <div className="flex-1 ">
-        <h1 className="text-4xl  p-3 w-40 logo font-bold">Hassanjr</h1>
+      <div className="flex md:-mt-5    ">
+        
+        <Image 
+        className=" object-contain" 
+        src={logo}
+       
+        width="150" 
+        height="75"
+        />
       </div>
       {/* Nav big screen*/}
       <div>
@@ -74,7 +83,7 @@ const Nav = () => {
       )}
       {/* Menu */}
       <div className="block md:hidden absolute right-6">
-        <h1 className="text-1xl mt-5 z-100 " onClick={toggleMenu}>
+        <h1 className="text-1xl mt-5 z-100 text-white " onClick={toggleMenu}>
           <MenuIcon />
         </h1>
       </div>
