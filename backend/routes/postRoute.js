@@ -12,8 +12,7 @@ const {
 
 // home route
 router.route("/").get(getPosts).post(addPost);
-// specific home route
-router.route("/:id").get(specificPost)
+
 // dev route
 router.route("/dev").get(devPost);
 // tech route
@@ -22,5 +21,8 @@ router.route("/tech").get(techPost);
 router.route("/finance").get(financePost);
 // blockchain route
 router.route("/blockchain").get(blockchainPost);
+
+// specific home route
+router.route("/:id").get(specificPost)
 
 module.exports = router;

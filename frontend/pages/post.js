@@ -22,7 +22,7 @@ const post = () => {
       <h1 className="text-3xl text-bold">MAKE A BLOG</h1>
       <Formik
         initialValues={initialValues}
-        onSubmit={async (values) => {
+        onSubmit={async (values, { resetForm }) => {
           await new Promise((r) => setTimeout(r, 500));
           //  test
           axios
@@ -37,8 +37,8 @@ const post = () => {
             });
           // end
 
-          alert(JSON.stringify(values, null, 2));
           // console.log(values);
+          resetForm({ values: "" });
         }}
       >
         {({ values }) => (
@@ -136,9 +136,9 @@ const post = () => {
                         {/* content */}
                         <div className="col my-5 space-x-5">
                           <Field
+                            as="textarea"
                             name={`posts.${index}.content`}
                             placeholder="Enter The paragraphs content"
-                            type="textarea"
                             className="w-80 h-40 text-stone-900"
                           />
                           <ErrorMessage
