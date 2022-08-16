@@ -60,7 +60,7 @@ const financePost = async (req, res) => {
 
 const specificPost = async (req, res) => {
   const ids = await req.params.id
-  const data = await Post.findOne({ _id: ids });
+  const data = await Post.findOne({ _id: `ObjectId("${ids}")` });
   if (!data) {
     res.status(400);
     throw new Error("Post not found");
