@@ -7,9 +7,6 @@ const getPosts = async (req, res) => {
     res.status(400);
     throw new Error("Posts not found");
   }
-  console.log('====================================');
-  console.log(posts[0]._id);
-  console.log('====================================');
   res.status(200).json(posts);
 };
 
@@ -39,7 +36,7 @@ const techPost = async (req, res) => {
 
 const blockchainPost = async (req, res) => {
   const data = await Post.find({ category: "blockchain" }).sort({
-    createdAt: -1,
+    createdAt: -1
   });
   if (!data) {
     res.status(400);
@@ -59,8 +56,11 @@ const financePost = async (req, res) => {
 };
 
 const specificPost = async (req, res) => {
-  const ids = await req.params.id
-  const data = await Post.findOne({ _id: `ObjectId("${ids}")` });
+  const id = await new mongoose.Types.ObjectId(req.params.id);
+  console.log('====================================');
+  console.log(id);
+  console.log('====================================');
+  const data = await Post.findById(id);
   if (!data) {
     res.status(400);
     throw new Error("Post not found");
