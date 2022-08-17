@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const postSchema = mongoose.Schema(
   {
-    
     mainTitle: String,
     mainUrl: String,
     category: String,

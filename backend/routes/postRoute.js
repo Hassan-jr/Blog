@@ -7,7 +7,7 @@ const {
   financePost,
   blockchainPost,
   techPost,
-  specificPost
+  onePost
 } = require("../controllers/postController");
 
 // home route
@@ -23,6 +23,6 @@ router.route("/finance").get(financePost);
 router.route("/blockchain").get(blockchainPost);
 
 // specific home route
-router.route("/:id").get(specificPost)
+router.route("/article/:id").get(onePost)
 
 module.exports = router;
