@@ -21,19 +21,69 @@ export const get_all = () => async (dispatch) => {
 };
 
 // get blockchain
-
 export const get_blockchain = () => async (dispatch) => {
-    try {
-      await axios.get(`${url}blockchain`).then((response) => {
-        dispatch({
-          type: t.GET_BLOCKCHAIN,
-          payload: response.data,
-        });
-      });
-    } catch (error) {
+  try {
+    await axios.get(`${url}blockchain`).then((response) => {
       dispatch({
-        type: t.Error,
-        payload: error,
+        type: t.GET_BLOCKCHAIN,
+        payload: response.data,
       });
-    }
-  };
+    });
+  } catch (error) {
+    dispatch({
+      type: t.Error,
+      payload: error,
+    });
+  }
+};
+
+// get dev
+export const get_dev = () => async (dispatch) => {
+  try {
+    await axios.get(`${url}dev`).then((response) => {
+      dispatch({
+        type: t.GET_DEV,
+        payload: response.data,
+      });
+    });
+  } catch (error) {
+    dispatch({
+      type: t.Error,
+      payload: error,
+    });
+  }
+};
+
+// get FINANACE
+export const get_finanace = () => async (dispatch) => {
+  try {
+    await axios.get(`${url}finance`).then((response) => {
+      dispatch({
+        type: t.GET_FINANCE,
+        payload: response.data,
+      });
+    });
+  } catch (error) {
+    dispatch({
+      type: t.Error,
+      payload: error,
+    });
+  }
+};
+
+// get tech
+export const get_tech = () => async (dispatch) => {
+  try {
+    await axios.get(`${url}tech`).then((response) => {
+      dispatch({
+        type: t.GET_TECH,
+        payload: response.data,
+      });
+    });
+  } catch (error) {
+    dispatch({
+      type: t.Error,
+      payload: error,
+    });
+  }
+};

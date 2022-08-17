@@ -7,7 +7,6 @@ const Main = (
     block: [],
     tech: [],
     finance: [],
-    health: [],
     loading: true,
     error: null,
   },
@@ -15,13 +14,12 @@ const Main = (
 ) => {
   // switch cases
   switch (action.type) {
-
     // case all data
     case t.GET_ALL_POSTS:
       return {
         ...state,
         all: action.payload,
-        loading: false
+        loading: false,
       };
 
     // case blockchain
@@ -29,7 +27,39 @@ const Main = (
       return {
         ...state,
         block: action.payload,
-        loading: false
+        loading: false,
+      };
+
+    // case dev
+    case t.GET_DEV:
+      return {
+        ...state,
+        dev: action.payload,
+        loading: false,
+      };
+
+    // case FINANCE
+    case t.GET_FINANCE:
+      return {
+        ...state,
+        finance: action.payload,
+        loading: false,
+      };
+
+    // case TECH
+    case t.GET_TECH:
+      return {
+        ...state,
+        tech: action.payload,
+        loading: false,
+      };
+
+    // CASE ERROR
+    case t.Error:
+      return {
+        ...state,
+        error: action.payload,
+        loading: false,
       };
 
     default:
