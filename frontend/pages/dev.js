@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import pic from "../img/devpic.png";
-import { get_all } from "../components/Redux/Actions/Main";
+import { get_all, get_blockchain } from "../components/Redux/Actions/Main";
 import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
 
 const dev = (props) => {
   const headerprops = {
@@ -17,20 +18,25 @@ const dev = (props) => {
     g6: "Api's",
     bg: "gradient-bg-welcome ",
   };
+  const [data, setData] = useState([]);
+
   const dispatch = useDispatch();
-  dispatch(get_all());
 
-  const state = useSelector((state) => state.Main.all);
-  console.log("STATE", state);
-  //const val = prop.get_all()
+  useEffect(() => {
+    dispatch(get_blockchain());
+  }, []);
 
-  //console.log("form prop", props);
-  //console.log("ffrom fun ", value);
+ 
+  const state = useSelector((state) => state.Main.block);
+  console.log("state", state);
+  
+
+  // console.log(data);
 
   return (
     <div>
       <Header {...headerprops} />
-      <h1>{state[0]}</h1>
+      <h1>{state.length > 0 && state[0].mainTitle}</h1>
     </div>
   );
 };

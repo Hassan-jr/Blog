@@ -7,7 +7,7 @@ const getPosts = async (req, res) => {
     res.status(400);
     throw new Error("Posts not found");
   }
-  res.status(200).json(posts);
+  res.send(posts);
 };
 
 // add post or create  post

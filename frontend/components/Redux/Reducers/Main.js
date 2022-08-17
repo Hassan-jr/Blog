@@ -8,16 +8,28 @@ const Main = (
     tech: [],
     finance: [],
     health: [],
-    loading: false,
+    loading: true,
     error: null,
   },
   action
 ) => {
+  // switch cases
   switch (action.type) {
+
+    // case all data
     case t.GET_ALL_POSTS:
       return {
         ...state,
-        all: [ "its woriking"],
+        all: action.payload,
+        loading: false
+      };
+
+    // case blockchain
+    case t.GET_BLOCKCHAIN:
+      return {
+        ...state,
+        block: action.payload,
+        loading: false
       };
 
     default:
