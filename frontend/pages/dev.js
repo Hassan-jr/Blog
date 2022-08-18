@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import pic from "../img/devpic.png";
-import { get_all, get_blockchain } from "../components/Redux/Actions/Main";
+import {
+  get_all,
+  get_blockchain,
+  get_one,
+} from "../components/Redux/Actions/Main";
 import { useSelector, useDispatch } from "react-redux";
-import axios from "axios";
 
 const dev = (props) => {
+
   const headerprops = {
     title: "We live and breathe software development",
     desc: "Welcome to where developers turn into proffesionals programmers, get instat help for any programming challenge and get assisted in building your projects ",
@@ -18,25 +22,20 @@ const dev = (props) => {
     g6: "Api's",
     bg: "gradient-bg-welcome ",
   };
-  const [data, setData] = useState([]);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(get_blockchain());
+    dispatch(get_one("62fb7da7b95c705c0d3ee72a"));
   }, []);
 
- 
-  const state = useSelector((state) => state.Main.block);
-  console.log("state", state);
+  const data = useSelector((state) => state.Main.onePost);
   
-
-  // console.log(data);
 
   return (
     <div>
       <Header {...headerprops} />
-      <h1>{state.length > 0 && state[0].mainTitle}</h1>
+      
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
-import Image from  'next/image';
-import logo from "../img/logo.png"
+import Image from "next/image";
+import logo from "../img/logo.png";
 
 const Nav = () => {
   const [menu, setMenu] = useState(false);
@@ -14,14 +14,7 @@ const Nav = () => {
     <div className="flex flex-row text-white justify-between px-3 pt-1 md:px-0 md:pr-10 md:pt-3 align-middle bg-gray-gradient">
       {/* LOGO */}
       <div className="flex md:-mt-5    ">
-        
-        <Image 
-        className=" object-contain" 
-        src={logo}
-       
-        width="150" 
-        height="75"
-        />
+        <Image className=" object-contain" src={logo} width="150" height="75" />
       </div>
       {/* Nav big screen*/}
       <div>
@@ -42,9 +35,6 @@ const Nav = () => {
             <Link href="/finance">Finance</Link>
           </li>
 
-          <li className=" hover:text-white">
-            <Link href="/health">Health</Link>
-          </li >
           <li className=" hover:text-white">
             <Link href="/about">About Us</Link>
           </li>
@@ -72,10 +62,7 @@ const Nav = () => {
           <li className=" hover:text-white">
             <Link href="/finance">Finance</Link>
           </li>
-          
-          <li className=" hover:text-white">
-            <Link href="/health">Health</Link>
-          </li>
+
           <li className=" hover:text-white">
             <Link href="/about">About Us</Link>
           </li>

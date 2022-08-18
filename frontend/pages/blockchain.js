@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import pic from "../img/Blockchainpic.png";
-import Link from 'next/link'
+import Link from "next/link";
+import { get_blockchain } from "../components/Redux/Actions/Main";
+import { useSelector, useDispatch } from "react-redux";
 
 const Blockchain = () => {
   const headerprops = {
@@ -16,19 +18,19 @@ const Blockchain = () => {
     g6: "Moralis",
     bg: "gradient-bg-services",
   };
-const post = {
-  id : 123456677,
-  content : "random content",
-}
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(get_blockchain());
+  }, []);
+
+  const data = useSelector((state) => state.Main.block);
+  console.log(data);
 
   return (
     <div>
       <Header {...headerprops} />
-      <p>
-        <Link href="/posts/[]" as={`posts/${post.id}`}>
-          click here
-        </Link>
-      </p>
     </div>
   );
 };

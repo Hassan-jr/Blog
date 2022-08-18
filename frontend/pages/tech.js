@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-
 import pic from '../img/techpic.svg'
+import { get_tech } from "../components/Redux/Actions/Main";
+import { useSelector, useDispatch } from "react-redux";
 
 const Tech = () => {
+
   const headerprops = {
     title: "",
     desc: "From newbies to professionals, we will help you to transform from analogue or semi-digitalised world to the  real digital world",
@@ -17,12 +19,18 @@ const Tech = () => {
     bg:  'gradient-bg-footer'
   };
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(get_tech());
+  }, []);
+  
+  const data = useSelector((state) => state.Main.tech)
+  console.log(data);
+
   return (
     <div className="h-80">
       <Header {...headerprops} />
-      ljlj
-      lksdjflkdj
-      lksdjflkdj
     </div>
   );
 };
