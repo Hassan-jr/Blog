@@ -4,6 +4,10 @@ import pic from "../img/homepic.png";
 import Image from "next/image"
 import { get_all } from "../components/Redux/Actions/Main";
 import { useSelector, useDispatch } from "react-redux";
+import Sideslider from '../components/Sideslider'
+ 
+import  Spiner from "../components/Spiner"
+
 
 const Home = () => {
 
@@ -27,17 +31,22 @@ useEffect(() => {
 }, []);
 
 const data = useSelector((state) => state.Main.all)
-console.log(data);
+const isLoading = useSelector((state) => state.Main.loading)
 
+if(isLoading){
+  return(
+    
+      <Spiner/>
+   
+  )
+}
 
   return (
     <div>
       <Header {...headerprops}/>
-     { data.length  > 0 && <Image src={data[0].mainUrl}
-       width  = "1500"
-      height = "500"
-      className = 'object-contain'
-      />}
+     {/* { data.length  > 0 && */}
+       <Sideslider data = {data} />
+     {/* } */}
     </div>
   )
 }

@@ -132,9 +132,32 @@
   }
 }
 
+/* slick slider css */
+.slides{
+  position: relative;
+}
+.slides .slick-prev,
+.slides .slick-next{
+background-color:  #02BC95;;
+  
+position: absolute;
+top: 50%;
+z-index: 1;
+
+
+}
+.slides .slick-prev{
+  left: 5%;
+}
+.slides .slick-next{
+  right: 5%;
+}
+
 
 body{
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+  background-color: #1F282F;
+  
 }
 
 
