@@ -2,10 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const Allcard = ({ item }) => {
 
+ 
+
   return (
-    <Link href='/posts/[]' as={`posts/${item._id}`}>
+    <Link href='/posts/[]' as={`posts/${item._id}`} >
     <div className='white-glassmorphism mt-1 rounded-md flex flex-row justify-center align-top w-full p-2 text-white'>
       <div>
         <Image

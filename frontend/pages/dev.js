@@ -9,7 +9,7 @@ import Sideslider from "../components/Sideslider";
 import Spiner from "../components/Spiner";
 import All from "../components/All"
 
-const dev = (props) => {
+const Dev = () => {
 
   const headerprops = {
     title: "We live and breathe software development",
@@ -59,4 +59,4 @@ const dev = (props) => {
   );
 };
 
-export default dev;
+export default Dev;

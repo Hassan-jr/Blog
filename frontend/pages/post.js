@@ -16,7 +16,7 @@ const initialValues = {
   ],
 };
 
-const post = () => {
+const Post = () => {
   return (
     <div className="flex flex-col  items-center justify-items-end  text-white space-x-2">
       <h1 className="text-3xl text-bold">MAKE A BLOG</h1>
@@ -167,9 +167,8 @@ const post = () => {
                         <div className="col">
                           <button
                             type="button"
-                            className="secondary"
                             onClick={() => remove(index)}
-                            className="bg-red-700 p-5 rounded"
+                            className="bg-red-700 p-5 rounded "
                           >
                             X
                           </button>
@@ -178,9 +177,8 @@ const post = () => {
                     ))}
                   <button
                     type="button"
-                    className="secondary"
                     onClick={() => push({ title: "", content: "", url: "" })}
-                    className="bg-sky-700 p-5 rounded m-5"
+                    className="bg-sky-700 p-5 rounded m-5 "
                   >
                     Add Paragraph
                   </button>
@@ -197,4 +195,4 @@ const post = () => {
   );
 };
 
-export default post;
+export default Post;
