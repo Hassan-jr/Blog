@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import pic from '../img/robot.png'
 import { get_finanace } from "../components/Redux/Actions/Main";
 import { useSelector, useDispatch } from "react-redux";
+import Sideslider from "../components/Sideslider";
+import Spiner from "../components/Spiner";
 
 const Finance = () => {
 
@@ -26,11 +28,23 @@ const Finance = () => {
   }, []);
 
   const data = useSelector((state) => state.Main.finance);
-  console.log(data);
+  const isLoading = useSelector((state) => state.Main.loading);
+
+  if (isLoading) {
+    return <Spiner />;
+  }
+
 
   return (
     <div>
       <Header {...headerprops} />
+
+       {/* card */}
+       <div className='mt-10'>
+        <h1 className="text-white text-3xl text-bold">Top Stories</h1>
+        <Sideslider  data={data} />
+      </div>
+      
     </div>
   );
 };

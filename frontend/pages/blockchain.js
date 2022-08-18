@@ -4,6 +4,8 @@ import pic from "../img/Blockchainpic.png";
 import Link from "next/link";
 import { get_blockchain } from "../components/Redux/Actions/Main";
 import { useSelector, useDispatch } from "react-redux";
+import Sideslider from "../components/Sideslider";
+import Spiner from "../components/Spiner";
 
 const Blockchain = () => {
   const headerprops = {
@@ -26,11 +28,22 @@ const Blockchain = () => {
   }, []);
 
   const data = useSelector((state) => state.Main.block);
-  console.log(data);
+  const isLoading = useSelector((state) => state.Main.loading);
+
+  if (isLoading) {
+    return <Spiner />;
+  }
 
   return (
     <div>
       <Header {...headerprops} />
+
+       {/* card */}
+       <div className='mt-10'>
+        <h1 className="text-white text-3xl text-bold">Top Stories</h1>
+        <Sideslider  data={data} />
+      </div>
+
     </div>
   );
 };

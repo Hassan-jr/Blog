@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import pic from "../img/devpic.png";
 import {
-  get_all,
-  get_blockchain,
-  get_one,
+  get_dev
 } from "../components/Redux/Actions/Main";
 import { useSelector, useDispatch } from "react-redux";
+import Sideslider from "../components/Sideslider";
+import Spiner from "../components/Spiner";
 
 const dev = (props) => {
 
@@ -26,16 +26,26 @@ const dev = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(get_one("62fb7da7b95c705c0d3ee72a"));
+    dispatch(get_dev());
   }, []);
 
-  const data = useSelector((state) => state.Main.onePost);
+  const data = useSelector((state) => state.Main.dev);
   
+  const isLoading = useSelector((state) => state.Main.loading);
+  
+  if (isLoading) {
+    return <Spiner />;
+  }
 
   return (
     <div>
+      {/* header */}
       <Header {...headerprops} />
-      
+      {/* card */}
+      <div className='mt-10'>
+        <h1 className="text-white text-3xl text-bold">Top Stories</h1>
+        <Sideslider data={data} />
+      </div>
     </div>
   );
 };

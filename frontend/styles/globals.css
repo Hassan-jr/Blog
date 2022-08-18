@@ -147,16 +147,18 @@ z-index: 1;
 
 }
 .slides .slick-prev{
-  left: 5%;
+  left: 0%;
 }
 .slides .slick-next{
-  right: 5%;
+  right: 0%;
 }
+
 
 
 body{
   /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
   background-color: #1F282F;
+ 
   
 }
 

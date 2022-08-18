@@ -11,7 +11,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="flex flex-row text-white justify-between px-3 pt-1 md:px-0 md:pr-10 md:pt-3 align-middle bg-gray-gradient">
+    <div className="flex flex-row text-white justify-between px-3 pt-1 md:px-0 md:pr-10 md:pt-3 align-middle bg-gray-gradient z-10">
       {/* LOGO */}
       <div className="flex md:-mt-5    ">
         <Image className=" object-contain" src={logo} width="150" height="75" />
