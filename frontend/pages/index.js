@@ -6,6 +6,7 @@ import { get_all } from "../components/Redux/Actions/Main";
 import { useSelector, useDispatch } from "react-redux";
 import Sideslider from "../components/Sideslider";
 import Spiner from "../components/Spiner";
+import All from "../components/All"
 
 const Home = () => {
   const headerprops = {
@@ -39,11 +40,16 @@ const Home = () => {
       <Header {...headerprops} />
 
       {/* card */}
-      <div className='mt-10'>
+      <div className="mt-10">
         <h1 className="text-white text-3xl text-bold">Top Stories</h1>
         <Sideslider data={data} />
       </div>
-      
+
+      {/* all posts */}
+      <div>
+        <h1 className="text-white text-3xl text-bold">Feeds</h1>
+        <All data={data} />
+      </div>
     </div>
   );
 };

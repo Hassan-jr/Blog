@@ -129,6 +129,7 @@
   50%  {
  border-radius: 0%;
  transform: rotate(100deg);
+ background-color:  #fda4af;
   }
 }
 
@@ -138,7 +139,7 @@
 }
 .slides .slick-prev,
 .slides .slick-next{
-background-color:  #02BC95;;
+background-color:  #02BC95;
   
 position: absolute;
 top: 50%;
