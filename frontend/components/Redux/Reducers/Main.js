@@ -7,6 +7,7 @@ const Main = (
     block: [],
     tech: [],
     finance: [],
+    onePost: {},
     loading: true,
     error: null,
   },
@@ -51,6 +52,14 @@ const Main = (
       return {
         ...state,
         tech: action.payload,
+        loading: false,
+      };
+
+       // case One Post
+    case t.GET_OnePost:
+      return {
+        ...state,
+        onePost: action.payload,
         loading: false,
       };
 
