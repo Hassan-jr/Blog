@@ -3,7 +3,7 @@ import Allcard from './Allcard'
 
 const All = ({data}) => {
   return (
-    <div>
+    <div className='p-3 md:p-10'>
         {data.map((item, index) => <Allcard key={index} item={item} />)}
     </div>
   )

@@ -89,13 +89,15 @@ export const get_tech = () => async (dispatch) => {
 };
 
 // get  One post
-export const get_one = (id) => async (dispatch) => {
+export const get_one = (id) => async (dispatch,id) => {
+  
   try {
     await axios.get(`${url}article/${id}`).then((response) => {
       dispatch({
         type: t.GET_OnePost,
         payload: response.data,
       });
+      console.log(response.data);
     });
   } catch (error) {
     dispatch({

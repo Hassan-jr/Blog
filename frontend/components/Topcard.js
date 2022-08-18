@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Topcard = ({ item }) => {
   return (
-    <div className=" flex flex-col space-y-auto  bg-neutral-500  w-52 md:w-80 h-72 md:h-80 border-solid border-2 rounded-md border-neutral-400 md:p-5 relative">
+    <div className=" flex flex-col space-y-auto   blue-glassmorphism  w-52 md:w-80 h-72 md:h-80 border-solid border-2 rounded-md border-neutral-500 md:p-5 relative">
       <div>
         <Image
           src={item.mainUrl}

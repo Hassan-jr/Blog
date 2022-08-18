@@ -6,6 +6,7 @@ import { get_blockchain } from "../components/Redux/Actions/Main";
 import { useSelector, useDispatch } from "react-redux";
 import Sideslider from "../components/Sideslider";
 import Spiner from "../components/Spiner";
+import All from "../components/All"
 
 const Blockchain = () => {
   const headerprops = {
@@ -42,6 +43,12 @@ const Blockchain = () => {
        <div className='mt-10'>
         <h1 className="text-white text-3xl text-bold">Top Stories</h1>
         <Sideslider  data={data} />
+      </div>
+
+       {/* all posts */}
+       <div>
+        <h1 className="text-white text-3xl text-bold">Feeds</h1>
+        <All data={data} />
       </div>
 
     </div>
