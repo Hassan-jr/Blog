@@ -12,7 +12,7 @@ const app = express()
 app.use (express.json())
 app.use(cors())
 app.use (express.urlencoded({extended: true}))
-const port =   process.env.PORT || 4000
+// const port =   process.env.PORT || 4000
 
 
 
@@ -32,6 +32,6 @@ if (process.env.NODE_ENV === 'production') {
   }
 
 
-app.listen (port, ()=>{
+app.listen ( process.env.PORT || 4000, ()=>{
     console.log('listening on port');
 })
