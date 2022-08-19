@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-import pic from "../img/Blockchainpic.png";
+import pic from "../img/blockchainpic.png";
 import Link from "next/link";
 import { get_blockchain } from "../components/Redux/Actions/Main";
 import { useSelector, useDispatch } from "react-redux";

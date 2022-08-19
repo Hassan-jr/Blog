@@ -2,7 +2,11 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "My Blog Website",
-  "main": "server.js",
+  "engines": {
+    "node": "16.15.0",
+    "npm": "8.5.2"
+  },
+  "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
