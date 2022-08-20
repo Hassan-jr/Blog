@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import pic from "../img/devpic.png";
-import {
-  get_dev
-} from "../components/Redux/Actions/Main";
+import { get_dev } from "../components/Redux/Actions/Main";
 import { useSelector, useDispatch } from "react-redux";
 import Sideslider from "../components/Sideslider";
 import Spiner from "../components/Spiner";
-import All from "../components/All"
+import All from "../components/All";
 
 const Dev = () => {
-
   const headerprops = {
     title: "We live and breathe software development",
     desc: "Welcome to where developers turn into proffesionals programmers, get instat help for any programming challenge and get assisted in building your projects ",
@@ -31,9 +28,9 @@ const Dev = () => {
   }, []);
 
   const data = useSelector((state) => state.Main.dev);
-  
+
   const isLoading = useSelector((state) => state.Main.loading);
-  
+
   if (isLoading) {
     return <Spiner />;
   }
@@ -44,17 +41,16 @@ const Dev = () => {
       <Header {...headerprops} />
 
       {/* card */}
-      <div className='mt-10'>
+      <div className="mt-10">
         <h1 className="text-white text-3xl text-bold">Top Stories</h1>
         <Sideslider data={data} />
       </div>
 
-       {/* all posts */}
-       <div>
+      {/* all posts */}
+      <div>
         <h1 className="text-white text-3xl text-bold">Feeds</h1>
         <All data={data} />
       </div>
-      
     </div>
   );
 };
