@@ -134,32 +134,60 @@
 }
 
 /* slick slider css */
+#wrapper{
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  
+}
 .slides{
   position: relative;
 }
 .slides .slick-prev,
 .slides .slick-next{
-background-color:  #02BC95;
-  
+background-color:  black ;
+color: black;
+position: absolute;
+height: 20px;
+top: 50%;
+z-index: 1;
+}
+
+.slides .slick-prev:hover,
+.slides .slick-next:hover{
+background-color:  rgb(11, 36, 222);
 position: absolute;
 top: 50%;
 z-index: 1;
-
-
 }
+
+/* test */
+.slides-list {
+ background:rgb(81, 235, 81);
+}
+/* spacing in between a group oof slides */
+.slick-slide { 
+  padding-left: 1.25%;
+  padding-right: 0.75%;
+  
+}
+
+/* end */
 .slides .slick-prev{
-  left: 0%;
+  left: 1%;
 }
 .slides .slick-next{
-  right: 0%;
+  right: 1%;
 }
 
 
 
 body{
-  /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
-  background-color: #1F282F;
- 
+  
+  /* background-color: #1F282F; */
+  background-color: #ffffff;
+ color:rgb(0, 0, 0);
   
 }
 

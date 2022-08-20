@@ -24,9 +24,9 @@ const Post = () => {
         initialValues={initialValues}
         onSubmit={async (values, { resetForm }) => {
           await new Promise((r) => setTimeout(r, 500));
-          //  test
+          //  post request
           axios
-            .post("post/", {
+            .post("http://localhost:5000/post/", {
               ...values,
             })
             .then(function (response) {
@@ -35,9 +35,7 @@ const Post = () => {
             .catch(function (error) {
               console.log(error);
             });
-          // end
-
-          // console.log(values);
+          // reset
           resetForm({ values: "" });
         }}
       >

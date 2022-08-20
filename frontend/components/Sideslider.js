@@ -27,7 +27,7 @@ const Sideslider = ({ data }) => {
   else {
 
     if(data.length > 2){
-      size = 3;
+      size = 4;
     }else if(data.length === 2){
       size = 2
     }
@@ -50,7 +50,7 @@ const Sideslider = ({ data }) => {
   };
 
   return (
-    <div className=" bg-neutral-700 md:h-90  p-2 md:pl-20">
+    <div className="  md:h-90 pl-60 md:pl-20" id="wrapper">
       <Slider Slider {...settings}>
         {data.map((item, index) => (
           <div className="  h-80 " key={index}>

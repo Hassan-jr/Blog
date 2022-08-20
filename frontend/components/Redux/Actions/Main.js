@@ -1,7 +1,7 @@
 import * as t from "../Types";
 import axios from "axios";
 
-const url = "post/";
+const url = "http://localhost:5000/post/";
 
 // get all doc
 export const get_all = () => async (dispatch) => {

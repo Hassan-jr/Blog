@@ -41,7 +41,7 @@ const Home = () => {
 
       {/* card */}
       <div className="mt-10">
-        <h1 className="text-white text-3xl text-bold">Top Stories</h1>
+        <h1 className="font-black text-3xl text-bold">Top Stories</h1>
         <Sideslider data={data} />
       </div>
 
