@@ -22,17 +22,17 @@ app.get('/', (req, res) => {
 })
 
 // Serve frontend
-// if (process.env.NODE_ENV === 'production') {
-//     app.use(express.static(path.join(__dirname, '../frontend/out')));
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../frontend/out')));
   
-//     app.get('*', (req, res) =>
-//       res.sendFile(
-//         path.resolve(__dirname, '../', 'frontend', 'out', 'index.html')
-//       )
-//     );
-//   } else {
-//     app.get('/', (req, res) => res.send('Please set to production'));
-//   }
+    app.get('*', (req, res) =>
+      res.sendFile(
+        path.resolve(__dirname, '../', 'frontend', 'out', 'index.html')
+      )
+    );
+  } else {
+    app.get('/', (req, res) => res.send('Please set to production'));
+  }
 
 
 app.listen (process.env.PORT || 4000, ()=>{
