@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express')
 const dotenv = require('dotenv').config();
 const cors = require('cors')
-const connectDB = require('./config/db');
+const connectDB = require('./config/db.js');
 
 
 
@@ -16,7 +16,7 @@ app.use (express.urlencoded({extended: true}))
 
 
 
-app.use('/post', require('./routes/postRoute'));
+app.use('/post', require('./routes/postRoute.js'));
 app.get('/', (req, res) => {
   res.send("HELLO THERE !!! YOU LOOK LOST")
 })
