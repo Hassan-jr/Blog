@@ -1,7 +1,7 @@
 import * as t from "../Types";
 import axios from "axios";
 
-const url = "http://localhost:5000/post/";
+const url = "post/";
 
 // get all doc
 export const get_all = () => async (dispatch) => {
@@ -89,8 +89,7 @@ export const get_tech = () => async (dispatch) => {
 };
 
 // get  One post
-export const get_one = (id) => async (dispatch,id) => {
-  
+export const get_one = (id) => async (dispatch, id) => {
   try {
     await axios.get(`${url}article/${id}`).then((response) => {
       dispatch({
