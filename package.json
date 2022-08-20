@@ -23,5 +23,5 @@
   "devDependencies": {
     "nodemon": "^2.0.19"
   },
-  "cacheDirectories": [".next/cache"]
+  "cacheDirectories": ["frontend/.next/cache"]
 }
