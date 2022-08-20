@@ -1,10 +1,10 @@
 const path = require('path');
 const express = require('express')
-const dotenv = require('dotenv')
+const dotenv = require('dotenv').config();
 const cors = require('cors')
 const connectDB = require('./config/db');
 
-dotenv.config()
+
 
 connectDB();
 
@@ -32,6 +32,6 @@ if (process.env.NODE_ENV === 'production') {
   }
 
 
-app.listen ( process.env.PORT || 4000, ()=>{
+app.listen (process.env.PORT || 4000, ()=>{
     console.log('listening on port');
-})
+});
