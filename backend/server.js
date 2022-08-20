@@ -17,9 +17,9 @@ app.use (express.urlencoded({extended: true}))
 
 
 app.use('/post', require('./routes/postRoute.js'));
-app.get('/', (req, res) => {
-  res.send("HELLO THERE !!! YOU LOOK LOST !!!!!!!!!!!!!")
-})
+// app.get('/', (req, res) => {
+//   res.send("HELLO THERE !!! YOU LOOK LOST !!!!!!!!!!!!!")
+// })
 
 // Serve frontend
 if (process.env.NODE_ENV === 'production') {
