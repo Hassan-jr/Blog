@@ -54,6 +54,13 @@ if (process.env.NODE_ENV === "production") {
       path.resolve(__dirname, "../", "frontend", "out", "finance.html")
     )
   );
+
+  // one post
+  app.get("/posts/:id", (req, res) =>
+  res.sendFile(
+    path.resolve(__dirname, "../", "frontend", "out", "posts", "[id].html")
+  )
+);
    
   // ABOUT
   app.get("/about", (req, res) =>

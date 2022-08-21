@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Sideslider from "../components/Sideslider";
 import Spiner from "../components/Spiner";
 import All from "../components/All"
+import Head from 'next/head'
 
 const Blockchain = () => {
   const headerprops = {
@@ -37,6 +38,11 @@ const Blockchain = () => {
 
   return (
     <div>
+      <Head>
+        <title>{headerprops.title}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name='description' content={headerprops.desc}/>
+      </Head>
       <Header {...headerprops} />
 
        {/* card */}

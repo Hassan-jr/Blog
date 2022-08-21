@@ -14,8 +14,8 @@ const Nav = () => {
   return (
     <div className="flex flex-row text-white justify-between px-3 pt-1 md:px-0 md:pr-10 md:pt-3 align-middle nav z-10 relative">
       {/* LOGO */}
-      <div className="relative w-28 h-10 md:h-12">
-        <Image className="object-contain" src={logo} layout="fill" />
+      <div className="relative w-28 md:w-28 h-10 md:h-12">
+        <Image className="object-contain" src={logo} layout="fill" alt=""/>
       </div>
       {/* Nav big screen*/}
       <div>
@@ -39,10 +39,7 @@ const Nav = () => {
           <li className=" p-2 hover:bg-red-400">
             <Link href="/about">About Us</Link>
           </li>
-          {/* to be remove */}
-          <li className=" p-2 hover:bg-red-400">
-            <Link href="/fpost">Post</Link>
-          </li>
+         
         </ul>
       </div>
       {/* nav small screen */}

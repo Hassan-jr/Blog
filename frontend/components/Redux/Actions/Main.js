@@ -1,8 +1,7 @@
 import * as t from "../Types";
 import axios from "axios";
 
-// http://localhost:5000/
-const url = "post/";
+const url = "/post/";
 
 // get all doc
 export const get_all = () => async (dispatch) => {
@@ -90,19 +89,19 @@ export const get_tech = () => async (dispatch) => {
 };
 
 // get  One post
-export const get_one = (id) => async (dispatch, id) => {
-  try {
-    await axios.get(`${url}article/${id}`).then((response) => {
-      dispatch({
-        type: t.GET_OnePost,
-        payload: response.data,
-      });
-      console.log(response.data);
-    });
-  } catch (error) {
-    dispatch({
-      type: t.Error,
-      payload: error,
-    });
-  }
-};
+// export const get_one = (id) => async (dispatch, id) => {
+//   try {
+//     await axios.get(`${url}article/${id}`).then((response) => {
+//       dispatch({
+//         type: t.GET_OnePost,
+//         payload: response.data,
+//       });
+//       console.log(response.data);
+//     });
+//   } catch (error) {
+//     dispatch({
+//       type: t.Error,
+//       payload: error,
+//     });
+//   }
+// };

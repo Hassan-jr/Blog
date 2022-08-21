@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Sideslider from "../components/Sideslider";
 import Spiner from "../components/Spiner";
 import All from "../components/All";
+import Head from "next/head";
 
 const Dev = () => {
   const headerprops = {
@@ -37,17 +38,25 @@ const Dev = () => {
 
   return (
     <div>
+      <Head>
+        <title>{headerprops.title}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content={headerprops.desc} />
+      </Head>
+
       {/* header */}
       <Header {...headerprops} />
 
       {/* card */}
       <div className="mt-10">
-      <h1 className="font-black text-3xl text-bold text-center pb-2">Top Stories</h1>
+        <h1 className="font-black text-3xl text-bold text-center pb-2">
+          Top Stories
+        </h1>
         <Sideslider data={data} />
       </div>
 
       {/* all posts */}
-      <div className='mt-5'>
+      <div className="mt-5">
         <h1 className="text-black text-3xl text-bold">Feeds</h1>
         <All data={data} />
       </div>

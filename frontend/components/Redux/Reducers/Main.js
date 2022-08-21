@@ -56,12 +56,12 @@ const Main = (
       };
 
        // case One Post
-    case t.GET_OnePost:
-      return {
-        ...state,
-        onePost: action.payload,
-        loading: false,
-      };
+    // case t.GET_OnePost:
+    //   return {
+    //     ...state,
+    //     onePost: action.payload,
+    //     loading: false,
+    //   };
 
     // CASE ERROR
     case t.Error:
