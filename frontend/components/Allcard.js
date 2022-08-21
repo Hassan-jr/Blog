@@ -9,26 +9,26 @@ const Allcard = ({ item }) => {
 
   return (
     <Link href='/posts/[]' as={`posts/${item._id}`} >
-    <div className='white-glassmorphism mt-1 rounded-md flex flex-row justify-center align-top w-full p-2 text-white'>
-      <div>
+    <div className= ' white-glassmorphism mt-1 rounded-md flex flex-row justify-center align-top w-full p-2 text-black'>
+      <div className='relative w-28 h-24 md:h-32 md:w-32' >
         <Image
           src={item.mainUrl}
-          width="200"
-          height="100"
+          layout='fill'
           className="object-fill mt-0"
         />
       </div>
 
+
       <div className='flex-1 pl-3'>
-        <h1 className="text-xl md:text-4xl text-bold">{item.mainTitle}</h1>
+        <h1 className=" md:text-2xl font-bold">{item.mainTitle}</h1>
         {/* large */}
-        <h1 className='hidden md:flex'>
-          {item.posts[0].content.slice(0, 400)}.....<span className="text-cyan-400">Read More</span>
+        <h1 className='hidden md:block '>
+          {item.posts[0].content.slice(0, 400)}.....<span className="text-blue-500">Read More</span>
         </h1>
            {/* small */}
-        <h1 className='flex flex-col md:hidden'>
+        <h1 className='block md:hidden text-sm'>
           {item.posts[0].content.slice(0, 60)}....
-          <p className="text-cyan-400">Read More</p>
+          <span className="text-cyan-400">Read More</span>
         </h1>
       </div>
     </div>

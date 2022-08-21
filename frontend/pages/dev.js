@@ -18,7 +18,7 @@ const Dev = () => {
     g4: "Programming",
     g5: "Software Deve",
     g6: "Api's",
-    bg: "gradient-bg-welcome ",
+    bg: "dev ",
   };
 
   const dispatch = useDispatch();
@@ -42,13 +42,13 @@ const Dev = () => {
 
       {/* card */}
       <div className="mt-10">
-        <h1 className="text-white text-3xl text-bold">Top Stories</h1>
+      <h1 className="font-black text-3xl text-bold text-center pb-2">Top Stories</h1>
         <Sideslider data={data} />
       </div>
 
       {/* all posts */}
-      <div>
-        <h1 className="text-white text-3xl text-bold">Feeds</h1>
+      <div className='mt-5'>
+        <h1 className="text-black text-3xl text-bold">Feeds</h1>
         <All data={data} />
       </div>
     </div>

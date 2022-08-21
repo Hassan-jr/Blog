@@ -13,8 +13,8 @@ const Header = (prop) => {
     >
       {/* text */}
       <div className="md:w-96 w-full ">
-        <h1 className="font-bold text-3xl text-gradient2 mb-6">{prop.title}</h1>
-        <p className="white-glassmorphism p-3 ">{prop.desc}</p>
+        <h1 className="font-bold text-3xl text-gray-50 mb-6">{prop.title}</h1>
+        <p className="white-glassmorphism p-3 font-semibold">{prop.desc}</p>
         {/* grid  table title */}
         <div>
           <h1 className="font-bold text-3xl text-gradient mt-5">

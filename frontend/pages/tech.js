@@ -10,7 +10,7 @@ import All from "../components/All"
 const Tech = () => {
 
   const headerprops = {
-    title: "",
+    title: "The future of technology starts here",
     desc: "From newbies to professionals, we will help you to transform from analogue or semi-digitalised world to the  real digital world",
     pic,
     g1: "AI",
@@ -19,7 +19,7 @@ const Tech = () => {
     g4: "ML",
     g5: "CS",
     g6: "Cybersecurity",
-    bg:  'gradient-bg-footer'
+    bg:  'tech'
   };
 
   const dispatch = useDispatch();
@@ -42,13 +42,13 @@ const Tech = () => {
 
         {/* card */}
       <div className='mt-10'>
-        <h1 className="text-white text-3xl text-bold">Top Stories</h1>
+      <h1 className="font-black text-3xl text-bold text-center pb-2">Top Stories</h1>
         <Sideslider data={data} />
       </div>
 
        {/* all posts */}
-       <div>
-        <h1 className="text-white text-3xl text-bold">Feeds</h1>
+       <div className='mt-5'>
+        <h1 className="text-black text-3xl text-bold">Feeds</h1>
         <All data={data} />
       </div>
       

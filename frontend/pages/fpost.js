@@ -18,7 +18,7 @@ const initialValues = {
 
 const Post = () => {
   return (
-    <div className="flex flex-col  items-center justify-items-end  text-white space-x-2">
+    <div className="flex flex-col  items-center justify-items-end  text-white space-x-2 post">
       <h1 className="text-3xl text-bold">MAKE A BLOG</h1>
       <Formik
         initialValues={initialValues}
