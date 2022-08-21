@@ -26,7 +26,7 @@ const Post = () => {
           await new Promise((r) => setTimeout(r, 500));
           //  post request
           axios
-            .post("http://localhost:5000/post/", {
+            .post("post/", {
               ...values,
             })
             .then(function (response) {
