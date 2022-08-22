@@ -23,11 +23,13 @@ const Sideslider = ({ data }) => {
       size = 1;
     }
     
-  } 
+  }  /* bigg screen */
   else {
 
-    if(data.length > 2){
+    if(data.length > 3){
       size = 4;
+    }else if(data.length === 3){
+      size = 3
     }else if(data.length === 2){
       size = 2
     }

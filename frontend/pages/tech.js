@@ -47,7 +47,7 @@ const Tech = () => {
 
       {/* card */}
       <div className="mt-10">
-        <h1 className="font-black text-3xl text-bold text-center pb-2">
+        <h1 className="font-black text-3xl text-gradient text-center pb-2">
           Top Stories
         </h1>
         <Sideslider data={data} />
@@ -55,7 +55,7 @@ const Tech = () => {
 
       {/* all posts */}
       <div className="mt-5">
-      <h1 className="text-black font-black text-3xl text-bold">Feeds</h1>
+      <h1 className="text-black text-gradient text-3xl font-bold">Feeds</h1>
         <All data={data} />
       </div>
     </div>

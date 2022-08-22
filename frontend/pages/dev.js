@@ -49,7 +49,7 @@ const Dev = () => {
 
       {/* card */}
       <div className="mt-10">
-        <h1 className="font-black text-3xl text-bold text-center pb-2">
+        <h1 className="font-black text-3xl text-bold text-center pb-2 text-gradient">
           Top Stories
         </h1>
         <Sideslider data={data} />
@@ -57,7 +57,7 @@ const Dev = () => {
 
       {/* all posts */}
       <div className="mt-5">
-        <h1 className="text-black text-3xl text-bold">Feeds</h1>
+        <h1 className="text-black text-3xl font-bold text-gradient">Feeds</h1>
         <All data={data} />
       </div>
     </div>

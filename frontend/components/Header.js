@@ -53,6 +53,7 @@ const Header = (prop) => {
           width="500"
           src={prop.pic}
           alt=""
+          priority
         />
       </div>
     </div>

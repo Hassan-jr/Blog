@@ -49,13 +49,13 @@ const Finance = () => {
 
        {/* card */}
        <div className='mt-10'>
-       <h1 className="font-black text-3xl text-bold text-center pb-2">Top Stories</h1>
+       <h1 className="font-black text-3xl text-bold text-center text-gradient pb-2">Top Stories</h1>
         <Sideslider  data={data} />
       </div>
 
        {/* all posts */}
        <div className='mt-5'>
-        <h1 className="text-black text-3xl text-bold">Feeds</h1>
+        <h1 className="text-black text-3xl text-gradient font-bold">Feeds</h1>
         <All data={data} />
       </div>
       

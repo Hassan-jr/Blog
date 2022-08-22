@@ -61,12 +61,9 @@ const Posts = () => {
                   key={index}
                 >
                   {post.title && (
-                    <p className="text-3xl font-bold">{post.title}</p>
+                    <p className="text-3xl text-gradient font-bold">{post.title}</p>
                   )}
-                  {post.content && (
-                    <p className="text-xl md:text-2xl py-5">{post.content}</p>
-                  )}
-                  {post.url && (
+                    {post.url && (
                     <div className="relative h-80 w-full">
                       <Image
                         src={post.url}
@@ -76,6 +73,10 @@ const Posts = () => {
                       />
                     </div>
                   )}
+                  {post.content && (
+                    <p className="text-xl md:text-2xl py-5">{post.content}</p>
+                  )}
+                
                 </div>
               ))}
           </div>
