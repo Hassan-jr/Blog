@@ -51,6 +51,9 @@ const Footer = () => {
             <li className=" p-2 hover:bg-red-400 text-sm md:text-xl">
               Phone NO: &nbsp;&nbsp; +254725151165
             </li>
+            <li className=" p-2 hover:bg-red-400 text-sm md:text-xl">
+              Website: &nbsp;&nbsp; <a href="https://www.hassanjr.com/">hassanjr.com</a>
+            </li>
           </ul>
         </div>
       </div>

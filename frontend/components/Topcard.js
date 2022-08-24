@@ -15,7 +15,7 @@ const Topcard = ({ item }) => {
         />
       </div>
       <div className="">
-        <h1 className="  text-xl font-bold">{item.mainTitle}</h1>
+        <h1 className="  text-xl font-semibold">{item.mainTitle}</h1>
         <h1 className='hidden md:block'>
           {item.posts[0].content.slice(0, 50)}.....<span className="text-blue-500"><Link href='/posts/[]' as={`posts/${item._id}`} >Read More</Link></span>
         </h1>

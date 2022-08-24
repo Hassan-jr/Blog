@@ -18,7 +18,7 @@ const Header = (prop) => {
         {/* grid  table title */}
         <div>
           <h1 className="font-bold text-3xl text-gradient mt-5">
-            Area Of Specializations
+           { prop.skills || "Area Of Specializations"}
           </h1>
         </div>
         {/* the grid table */}
