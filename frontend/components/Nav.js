@@ -37,7 +37,7 @@ const Nav = () => {
           </li>
 
           <li className=" p-2 hover:bg-red-400">
-            <Link href="/about">About Us</Link>
+            <Link href="/about">About</Link>
           </li>
          
         </ul>
@@ -62,7 +62,7 @@ const Nav = () => {
           </li>
 
           <li className=" p-2 hover:bg-red-400">
-            <Link href="/about">About Us</Link>
+            <Link href="/about">About</Link>
           </li>
         </ul>
       )}
