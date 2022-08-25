@@ -67,7 +67,7 @@ const Posts = () => {
                     <div className="relative h-80 w-full">
                       <Image
                         src={post.url}
-                        className=""
+                        className="object-contain"
                         layout="fill"
                         alt={post.title || ""}
                       />
