@@ -3,10 +3,10 @@ Link : https://hassanjrblog.herokuapp.com
 
 ## Top Niches:
          
- *Full Stack Development
+ *Full Stack Development*
          
- *Blockchain Development
+ *Blockchain Development*
         
-  *Technology 
+  *Technology* 
         
-  *Finance 
+  *Finance* 
