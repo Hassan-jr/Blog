@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=UA-198293761-2`}
       />
-      <Script strategy="lazyOnload">
+      <Script id="my-script" strategy="lazyOnload">
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
