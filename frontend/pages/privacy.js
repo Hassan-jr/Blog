@@ -5,7 +5,7 @@ const privacy = () => {
    <div className='space-y-4 p-5'>
 
   {/* Hello world */}
-  <h1 className='text-3xl font-bold'>Privacy policy</h1>
+  <h1 className='text-4xl font-bold'>Privacy policy</h1>
   <p>
     We respect your privacy and are committed to protecting it through our
     compliance with this privacy policy (“Policy”). This Policy describes the
@@ -34,7 +34,7 @@ const privacy = () => {
     or to individuals that we do not employ or manage.
   </p>
  
-  <h2 i>Collection of information</h2>
+  <h2 className='text-2xl font-bold'>Collection of information</h2>
   <p>
     Our top priority is customer data security and, as such, we exercise the no
     logs policy. We may process only minimal user data, only as much as it is
@@ -44,7 +44,7 @@ const privacy = () => {
     Services. This statistical information is not otherwise aggregated in such a
     way that would identify any particular user of the system.
   </p>
-  <h2 >Privacy of children</h2>
+  <h2 className='text-2xl font-bold'>Privacy of children</h2>
   <p>
     We do not knowingly collect any Personal Information from children under the
     age of 13. If you are under the age of 13, please do not submit any Personal
@@ -62,7 +62,7 @@ const privacy = () => {
     children are instructed to never give out Personal Information when online
     without their permission.
   </p>
-  <h2 >
+  <h2 className='text-2xl font-bold'>
     Use and processing of collected information
   </h2>
   <p>
@@ -121,14 +121,14 @@ const privacy = () => {
     contractual requirement, or a requirement necessary to enter into a
     contract.
   </p>
-  <h2 >Disclosure of information</h2>
+  <h2 className='text-2xl font-bold'>Disclosure of information</h2>
   <p>
     
     To maintain the highest level of privacy and to protect your Personal
     Information to the full extent, we do not share your Personal Information
     with anyone and for any reason.
   </p>
-  <h2 >Retention of information</h2>
+  <h2 className='text-2xl font-bold'>Retention of information</h2>
   <p>
     We will retain and use your Personal Information for the period necessary to
     comply with our legal obligations, to enforce our agreements, resolve
@@ -143,7 +143,7 @@ const privacy = () => {
     erasure, the right to rectification, and the right to data portability
     cannot be enforced after the expiration of the retention period.
   </p>
-  <h2 >Do Not Track signals</h2>
+  <h2 className='text-2xl font-bold' >Do Not Track signals</h2>
   <p>
     Some browsers incorporate a Do Not Track feature that signals to websites
     you visit that you do not want to have your online activity tracked.
@@ -159,7 +159,7 @@ const privacy = () => {
     mobile devices or to learn more about the choices available to you, visit{" "}
     
   </p>
-  <h2 >Links to other resources</h2>
+  <h2 className='text-2xl font-bold'>Links to other resources</h2>
   <p>
     The Services contain links to other resources that are not owned or
     controlled by us. Please be aware that we are not responsible for the
@@ -167,7 +167,7 @@ const privacy = () => {
     to be aware when you leave the Services and to read the privacy statements
     of each and every resource that may collect Personal Information.
   </p>
-  <h2 >Information security</h2>
+  <h2 className='text-2xl font-bold'>Information security</h2>
   <p>
     We secure information you provide on computer servers in a controlled,
     secure environment, protected from unauthorized access, use, or disclosure.
@@ -185,7 +185,7 @@ const privacy = () => {
     be viewed or tampered with in transit by a third party, despite best
     efforts.
   </p>
-  <h2 >Data breach</h2>
+  <h2 className='text-2xl font-bold'>Data breach</h2>
   <p>
     In the event we become aware that the security of the Services has been
     compromised or Users’ Personal Information has been disclosed to unrelated
@@ -198,7 +198,7 @@ const privacy = () => {
     of harm to the User as a result of the breach or if notice is otherwise
     required by law. When we do, we will post a notice on the Services.
   </p>
-  <h2 >Changes and amendments</h2>
+  <h2 className='text-2xl font-bold'>Changes and amendments</h2>
   <p>
     We reserve the right to modify this Policy or its terms related to the
     Services at any time at our discretion. When we do, we will revise the
@@ -215,7 +215,7 @@ const privacy = () => {
     Information in a manner materially different than what was stated at the
     time your Personal Information was collected.
   </p>
-  <h2 >Acceptance of this policy</h2>
+  <h2 className='text-2xl font-bold'>Acceptance of this policy</h2>
   <p>
     You acknowledge that you have read this Policy and agree to all its terms
     and conditions. By accessing and using the Services and submitting your
@@ -225,15 +225,20 @@ const privacy = () => {
     
     .
   </p>
-  <h2 >Contacting us</h2>
+  <h2 className='text-2xl font-bold'>Contacting us</h2>
   <p>
     If you have any questions, concerns, or complaints regarding this Policy,
     the information we hold about you, or if you wish to exercise your rights,
     we encourage you to contact us using the details below:
   </p>
   <p>
-    <a href="mailto:abdiladifhassan115@gmail.com">
+    <a className='text-blue-500' href="mailto:abdiladifhassan115@gmail.com">
       abdiladifhassan115@gmail.com
+    </a>
+  </p>
+  <p>
+  <a className='text-blue-500' href="https://www.hassanjr.com/">
+     https://www.hassanjr.com
     </a>
   </p>
   <p>
@@ -242,7 +247,7 @@ const privacy = () => {
     in any event, within the timescales provided by applicable data protection
     laws.
   </p>
-  <p>This document was last updated on November 3, 2022</p>
+  <p className='text-sm text-center'>This document was last updated on November 3, 2022</p>
  
 
 

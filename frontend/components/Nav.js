@@ -39,6 +39,10 @@ const Nav = () => {
           <li className=" p-2 hover:bg-red-400">
             <Link href="/about">About</Link>
           </li>
+
+          <li className=" p-2 hover:bg-red-400">
+            <Link href="/privacy">Privacy</Link>
+          </li>
          
         </ul>
       </div>
@@ -63,6 +67,10 @@ const Nav = () => {
 
           <li className=" p-2 hover:bg-red-400">
             <Link href="/about">About</Link>
+          </li>
+
+          <li className=" p-2 hover:bg-red-400">
+            <Link href="/privacy">Privacy</Link>
           </li>
         </ul>
       )}
