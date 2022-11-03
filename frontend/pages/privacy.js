@@ -1,9 +1,13 @@
 import React from 'react'
+import Head from "next/head";
 
 const privacy = () => {
   return (
    <div className='space-y-4 p-5'>
-
+  <Head>
+        <title>Privacy Policy</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
   {/* Hello world */}
   <h1 className='text-4xl font-bold'>Privacy policy</h1>
   <p>

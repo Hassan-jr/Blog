@@ -41,7 +41,7 @@ const Nav = () => {
           </li>
 
           <li className=" p-2 hover:bg-red-400">
-            <Link href="/privacy">Privacy</Link>
+            <Link href="/privacy">Privacy Policy</Link>
           </li>
          
         </ul>
@@ -70,7 +70,7 @@ const Nav = () => {
           </li>
 
           <li className=" p-2 hover:bg-red-400">
-            <Link href="/privacy">Privacy</Link>
+            <Link href="/privacy">Privacy Policy</Link>
           </li>
         </ul>
       )}
