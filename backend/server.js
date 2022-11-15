@@ -69,6 +69,13 @@ if (process.env.NODE_ENV === "production") {
   )
 );
 
+// noma pricacy policy
+app.get("/noma", (req, res) =>
+res.sendFile(
+  path.resolve(__dirname, "../", "frontend", "out", "noma.html")
+)
+);
+
 
     // POST 
     app.get("/fpost", (req, res) =>
