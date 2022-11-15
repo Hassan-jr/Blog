@@ -1,5 +1,5 @@
 # MY BLOG WEBSITE 
-Link : https://hassanjrblog.herokuapp.com
+Link : https://blog.hassanjr.com
 
 ## Top Niches:
          
