@@ -6,6 +6,12 @@ import noma from "../img/noma.png";
 const privacy = () => {
   return (
     <div className="ml-10 mt-10 space-y-3">
+ <Head>
+        <title>Noma document manager Privacy Policy</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Noma document manager app privacy policy" />
+      </Head>
+
       {/* Hader */}
       <div>
         <div>
