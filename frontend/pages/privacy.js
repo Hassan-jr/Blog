@@ -63,16 +63,16 @@ const privacy = () => {
               <a href="#3">How DO WE USE YOUR DATA OR INFORMATION</a>
             </li>
             <li>
-              <a href="#">DISCLOSURE OF YOUR INFORMATION</a>
+              <a href="#4">DISCLOSURE OF YOUR INFORMATION</a>
             </li>
             <li>
-              <a href="#">WHERE WE STORE YOUR PERSONAL INFORMATION</a>
+              <a href="#5">WHERE WE STORE YOUR PERSONAL INFORMATION</a>
             </li>
             <li>
-              <a href="#">YOUR RIGHTS</a>
+              <a href="#6">YOUR RIGHTS</a>
             </li>
             <li>
-              <a href="#">CONTACT US</a>
+              <a href="#7">CONTACT US</a>
             </li>
           </ul>
         </div>
@@ -135,9 +135,40 @@ const privacy = () => {
 
       {/* 4 */}
 
-      <div>
-        <h1 className="text-3xl text-pink-600 font-bold"></h1>
+      <div id='4'>
+        <h1 className="text-3xl text-pink-600 font-bold">DISCLOSURE OF YOUR INFORMATION</h1>
+        <p>We do not sell or rent Personal Information or data to marketers or third parties or advertisement</p>
+        <p>Incase of data leak issues users can contact the admin directly on his website at <a href="www.hassanjr.com" className="text-blue-400">hassanjr.com</a></p>
       </div>
+    
+    {/* 5 */}
+
+    <div id="5">
+      <h1 className="text-3xl text-pink-600 font-bold">
+      WHERE WE STORE YOUR PERSONAL INFORMATION
+      </h1>
+      <p>Noma is based on Nairobi,Kenya and users data collected are not stored in a database or any sort of storage Since the app only accessed the files or folder paths,</p>
+      <p> Therefore, Noma document Manager does not collect but access the files and folder path that are not taken out of the users device</p>
+    </div>
+
+{/* 6 */}
+<div id="6">
+ <h1 className="text-3xl text-pink-600 font-bold">YOUR RIGHTS</h1>
+ <p>All users of Noma Document Manager App Have the following rights</p>
+ <ul className="list-disc ml-10">
+  <li>Delete The Noma Document Manager App from there device</li>
+  <li>Deny the Noma App access to all files Permission</li>
+  <li> Deny the Noma App access to Read Permission</li>
+  <li> Deny the Noam App access to Wright Permission</li>
+  <li>Restrict the Permissions of the Noma App</li>
+ </ul>
+</div>
+
+{/* 7 */}
+<div id="7">
+ <h1 className="text-3xl text-pink-600 font-bold">CONTACT US</h1>
+ <p>Questions, comments and requests regarding this policy may be addressed to the contact section at:<a href="www.hassanjr.com" className="text-blue-400">hassanjr.com</a> </p>
+</div>
 
     </div>
   );
