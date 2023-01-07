@@ -10,3 +10,5 @@ Link : https://blog.hassanjr.com
   *Technology* 
         
   *Finance*
+  
+  ### *The design of the blog to be updated from Feb 3*
